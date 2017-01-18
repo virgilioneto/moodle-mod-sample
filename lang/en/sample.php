@@ -10,8 +10,10 @@
 defined('MOODLE_INTERNAL') || die();
 
 // General
+$string["pluginname"] = "Sample";
 $string["modulename"] = "Sample";
 $string["modulenameplural"] = "Samples";
+$string["pluginadministration"] = "Plugin Adminstration";
 
 // Settings Page
 $string["pluginconfig"] = "Sample config";
