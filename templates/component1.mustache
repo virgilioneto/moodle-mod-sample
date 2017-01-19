@@ -1,0 +1,41 @@
+{{!
+    Component 1 template
+    @package    mod_sample/component1
+    @copyright  2017 https://github.com/virgilioneto
+    @author     Virgilio Neto <virgilio.missao.neto@gmail.com>
+    @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+}}
+{{!
+    @template mod_sample/component1
+
+    Classes required for JS:
+    * None
+
+    Data attibutes required for JS:
+    * None
+
+    Context variables required for this template:
+    * items
+
+    Example context (json):
+    {
+        items: [
+            {
+                id: {Number},
+                field_1: {Number},
+                field_2: {String},
+                field_3: {HTMLString},
+                field_4: {Number}
+            }
+        ]
+    }
+}}
+{{#items}}
+<div class="col-md-3">
+    <div class="card">
+        <header class="card-header">{{id}} - {{field_2}}</header>
+        <div class="card-block">{{{field_3}}}</div>
+        <footer class="card-header">{{field_1}} / {{field_4}}</footer>
+    </div>
+</div>
+{{/items}}
