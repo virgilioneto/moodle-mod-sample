@@ -19,8 +19,8 @@ if ($id) {
     $sample = $DB->get_record('sample', array('id' => $cm->instance), '*', MUST_EXIST);
 } else if ($s) {
     $sample = $DB->get_record('sample', array('id' => $s), '*', MUST_EXIST);
-    $course = $DB->get_record('course', array('id' => $$samplevideoforum->course), '*', MUST_EXIST);
-    $cm = get_coursemodule_from_instance('videoforum', $sample->id, $course->id, false, MUST_EXIST);
+    $course = $DB->get_record('course', array('id' => $sample->course), '*', MUST_EXIST);
+    $cm = get_coursemodule_from_instance('sample', $sample->id, $course->id, false, MUST_EXIST);
 } else {
     error('You must specify a course_module ID or an instance ID');
 }
