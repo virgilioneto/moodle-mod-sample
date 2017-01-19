@@ -10,19 +10,22 @@
 defined('MOODLE_INTERNAL') || die();
 
 // General
-$string["pluginname"] = "Sample";
-$string["modulename"] = "Sample";
-$string["modulenameplural"] = "Samples";
-$string["pluginadministration"] = "Plugin Adminstration";
+$string['pluginname'] = 'Sample';
+$string['modulename'] = 'Sample';
+$string['modulenameplural'] = 'Samples';
+$string['pluginadministration'] = 'Plugin Adminstration';
 
 // Settings Page
-$string["pluginconfig"] = "Sample config";
-$string["maxbytes"] = "Upload limit";
-$string["maxbytesdesc"] = "Max upload size limit";
-$string["textfield"] = "Sample text field";
-$string["textfielddesc"] = "This is a sample text field";
+$string['pluginconfig'] = 'Sample config';
+$string['maxbytes'] = 'Upload limit';
+$string['maxbytesdesc'] = 'Max upload size limit';
+$string['textfield'] = 'Sample text field';
+$string['textfielddesc'] = 'This is a sample text field';
 
 // Mod Form
-$string["general"] = "General settings";
-$string["name"] = "Name";
-$string["name_help"] = "This is the activity name field";
+$string['general'] = 'General settings';
+$string['name'] = 'Name';
+$string['name_help'] = 'This is the activity name field';
+
+// View Page
+$string['loadingtext'] = 'Now Loading ...';
