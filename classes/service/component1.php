@@ -42,33 +42,33 @@ class mod_sample_component1 extends external_api {
         );
         
         return array(
-            array(   
+            array(
                 'id' => 1,
-                'field_1' => 100,
-                'field_2' => 'Some Text 1',
-                'field_3' => '<p>Some HTML text 1</p>',
-                'field_4' => 50
+                'title' => 'Some Text 1',
+                'htmltext' => '<p>Some HTML text 1</p>',
+                'value1' => 100,
+                'value2' => 50
             ),
             array(   
                 'id' => 2,
-                'field_1' => 100,
-                'field_2' => 'Some Text 2',
-                'field_3' => '<p>Some HTML text 2</p>',
-                'field_4' => 50
+                'title' => 'Some Text 2',
+                'htmltext' => '<p>Some HTML text 2</p>',
+                'value1' => 100,
+                'value2' => 50
             ),
             array(   
                 'id' => 3,
-                'field_1' => 100,
-                'field_2' => 'Some Text 3',
-                'field_3' => '<p>Some HTML text 3</p>',
-                'field_4' => 50
+                'title' => 'Some Text 3',
+                'htmltext' => '<p>Some HTML text 3</p>',
+                'value1' => 100,
+                'value2' => 50
             ),
             array(   
                 'id' => 4,
-                'field_1' => 100,
-                'field_2' => 'Some Text 4',
-                'field_3' => '<p>Some HTML text 4</p>',
-                'field_4' => 50
+                'title' => 'Some Text 4',
+                'htmltext' => '<p>Some HTML text 4</p>',
+                'value1' => 100,
+                'value2' => 50
             ),
         );
     }
@@ -82,10 +82,10 @@ class mod_sample_component1 extends external_api {
             new external_single_structure(
                 array(
                     'id' => new external_value(PARAM_INT, 'Item ID'),
-                    'field_1' => new external_value(PARAM_INT, 'Field 1'),
-                    'field_2' => new external_value(PARAM_TEXT, 'Field 2'),
-                    'field_3' => new external_value(PARAM_RAW, 'Field 3'),
-                    'field_4' => new external_value(PARAM_INT, 'Field 4')
+                    'title' => new external_value(PARAM_TEXT, 'Title'),
+                    'htmltext' => new external_value(PARAM_RAW, 'Html String'),
+                    'value1' => new external_value(PARAM_INT, 'Value 1'),
+                    'value2' => new external_value(PARAM_INT, 'Value 2')
                 )
             )
         );
