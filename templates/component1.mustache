@@ -22,10 +22,10 @@
         items: [
             {
                 id: {Number},
-                field_1: {Number},
-                field_2: {String},
-                field_3: {HTMLString},
-                field_4: {Number}
+                title {String},
+                htmltext: {HTMLString},
+                value1: {Number},
+                value2: {Number}
             }
         ]
     }
@@ -33,9 +33,9 @@
 {{#items}}
 <div class="col-md-3">
     <div class="card">
-        <header class="card-header">{{id}} - {{field_2}}</header>
-        <div class="card-block">{{{field_3}}}</div>
-        <footer class="card-header">{{field_1}} / {{field_4}}</footer>
+        <header class="card-header">{{id}} - {{title}}</header>
+        <div class="card-block">{{{htmltext}}}</div>
+        <footer class="card-header">{{value1}} / {{value2}}</footer>
     </div>
 </div>
 {{/items}}
