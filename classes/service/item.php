@@ -16,29 +16,29 @@ require_once("$CFG->dirroot/mod/sample/locallib.php");
 /**
  * @class mod_sample_component1
  */
-class mod_sample_component1 extends external_api {
+class mod_sample_item extends external_api {
     
     /**
      * Load items parameter validation
      * @return \external_function_parameters
      */
-    public static function load_items_parameters() {
+    public static function load_parameters() {
         return new external_function_parameters(
             array(
-                'cmid' => new external_value(PARAM_INT, 'Context Module ID')
+                'sampleid' => new external_value(PARAM_INT, 'Sample ID')
             )
         );
     }
 
     /**
      * Load items
-     * @param Int $cmid
+     * @param Int $sampleid
      * @return \external_multiple_structure
      */
-    public static function load_items($cmid) {
+    public static function load($sampleid) {
         $params = self::validate_parameters(
-            self::load_items_parameters(),
-            array('cmid' => $cmid)
+            self::load_parameters(),
+            array('sampleid' => $sampleid)
         );
         
         return array(
@@ -77,7 +77,7 @@ class mod_sample_component1 extends external_api {
      * Load items return validation
      * @return \external_multiple_structure
      */
-    public static function load_items_returns() {
+    public static function load_returns() {
         return new external_multiple_structure(
             new external_single_structure(
                 array(

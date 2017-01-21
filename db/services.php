@@ -11,10 +11,10 @@ defined('MOODLE_INTERNAL') || die;
 
 $functions = array(
     'mod_sample_load_items' => array(
-        'classname' => 'mod_sample_component1',
-        'methodname' => 'load_items',
-        'classpath' => 'mod/sample/classes/service/component1.php',
-        'description' => 'Load component1 items',
+        'classname' => 'mod_sample_item',
+        'methodname' => 'load',
+        'classpath' => 'mod/sample/classes/service/item.php',
+        'description' => 'Load sample items',
         'type' => 'read',
         'ajax' => true
     )
