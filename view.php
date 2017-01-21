@@ -55,5 +55,6 @@ $template = new \mod_sample\output\view_page($data);
 echo $output->render($template);
 
 $PAGE->requires->js_call_amd('mod_sample/item_list', 'init', array($sample->id));
+$PAGE->requires->js_call_amd('mod_sample/item_form', 'init', array($sample->id, $cm->id));
 
 echo $output->footer();
