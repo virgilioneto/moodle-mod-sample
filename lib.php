@@ -478,3 +478,29 @@ function sample_extend_navigation(navigation_node $navref, stdClass $course, std
 function sample_extend_settings_navigation(settings_navigation $settingsnav, navigation_node $samplenode=null) {
     // TODO Delete this function and its docblock, or implement it.
 }
+
+function sample_output_fragment_item_form($args) {
+    global $CFG;
+    $context = $args['context'];
+
+//    if ($context->contextlevel != CONTEXT_MODULE) {
+//        return null;
+//    }
+    require_once($CFG->dirroot . '/mod/sample/locallib.php');
+    $sample = new sample($context, null, null);
+
+    $userid = clean_param($args['userid'], PARAM_INT);
+    $attemptnumber = clean_param($args['attemptnumber'], PARAM_INT);
+    $formdata = array();
+    if (!empty($args['jsonformdata'])) {
+        $serialiseddata = json_decode($args['jsonformdata']);
+        parse_str($serialiseddata, $formdata);
+    }
+    $viewargs = array(
+        'userid' => $userid,
+        'attemptnumber' => $attemptnumber,
+        'formdata' => $formdata
+    );
+
+    return $sample->get_item_form($viewargs);
+}
