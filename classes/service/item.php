@@ -22,7 +22,7 @@ class mod_sample_item extends external_api {
      * Load items parameter validation
      * @return \external_function_parameters
      */
-    public static function load_parameters() {
+    public static function get_by_sampleid_parameters() {
         return new external_function_parameters(
             array(
                 'sampleid' => new external_value(PARAM_INT, 'Sample ID')
@@ -33,11 +33,11 @@ class mod_sample_item extends external_api {
     /**
      * Load items
      * @param Int $sampleid
-     * @return \external_multiple_structure
+     * @return array
      */
-    public static function load($sampleid) {
+    public static function get_by_sampleid($sampleid) {
         $params = self::validate_parameters(
-            self::load_parameters(),
+            self::get_by_sampleid_parameters(),
             array('sampleid' => $sampleid)
         );
         
@@ -77,7 +77,7 @@ class mod_sample_item extends external_api {
      * Load items return validation
      * @return \external_multiple_structure
      */
-    public static function load_returns() {
+    public static function get_by_sampleid_returns() {
         return new external_multiple_structure(
             new external_single_structure(
                 array(

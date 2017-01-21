@@ -35,7 +35,7 @@ define([
     function loadItems () {
         ajax.call([
             {
-                methodname: 'mod_sample_load_items',
+                methodname: 'mod_sample_get_by_sampleid',
                 args: {sampleid: sampleId},
                 done: loadTemplate,
                 fail: notification.exception

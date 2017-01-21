@@ -10,9 +10,9 @@
 defined('MOODLE_INTERNAL') || die;
 
 $functions = array(
-    'mod_sample_load_items' => array(
+    'mod_sample_get_by_sampleid' => array(
         'classname' => 'mod_sample_item',
-        'methodname' => 'load',
+        'methodname' => 'get_by_sampleid',
         'classpath' => 'mod/sample/classes/service/item.php',
         'description' => 'Load sample items',
         'type' => 'read',
