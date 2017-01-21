@@ -18,7 +18,7 @@ define([
     
     /**
      * Module initializer
-     * @param {Number} _cmId Course Module ID
+     * @param {Number} _sampleId Sample ID
      */
     function init (_sampleId) {
         if (!_sampleId) return notification.exception(new Error('_sampleId is required'));
