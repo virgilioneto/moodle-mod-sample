@@ -1,5 +1,5 @@
 /**
- * View Page Component 1
+ * Item List
  *
  * @package    mod_sample/component1
  * @copyright  2017 https://github.com/virgilioneto
@@ -13,17 +13,17 @@ define([
     'core/ajax',
     'mod_sample/loader'
 ], function ($, templates, notification, ajax, loader) {
-    var cmId = 0;
+    var sampleId = 0;
     var container;
     
     /**
      * Module initializer
      * @param {Number} _cmId Course Module ID
      */
-    function init (_cmId) {
-        if (!_cmId) return notification.exception(new Error('_cmId is required'));
-        cmId = _cmId;
-        container = $('#view_component1');
+    function init (_sampleId) {
+        if (!_sampleId) return notification.exception(new Error('_sampleId is required'));
+        sampleId = _sampleId;
+        container = $('#view-item-list');
         
         loader.init(container);
         loadItems();
@@ -36,7 +36,7 @@ define([
         ajax.call([
             {
                 methodname: 'mod_sample_load_items',
-                args: {cmid: cmId},
+                args: {sampleid: sampleId},
                 done: loadTemplate,
                 fail: notification.exception
             }
@@ -50,7 +50,7 @@ define([
      */
     function loadTemplate (items) {
         templates.render(
-            'mod_sample/component1', 
+            'mod_sample/item_list', 
             {items: items}
         )
         .done(templateCallback)
